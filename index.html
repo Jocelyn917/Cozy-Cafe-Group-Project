@@ -1,197 +1,49 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Garden Near Forest</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magical Forest Cafe - Dining Area</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main id="game" class="game day sunny" aria-label="Garden Near Forest game">
-    <header class="topbar">
-      <div class="brand">
-        <span class="brand-sprig">❧</span>
-        <div><small>WILLOW &amp; WHISK</small><strong>Garden Near Forest</strong></div>
-      </div>
-      <div class="day-card">
-        <button id="weatherButton" class="weather-icon" aria-label="Change weather">☀️</button>
-        <div><small id="dayLabel">DAY 4 · MORNING</small><strong id="clock">8:10 AM</strong></div>
-        <button id="timeButton" class="mini-button" title="Let time pass">+ 4h</button>
-      </div>
-      <div class="harmony-wrap">
-        <div class="harmony-label"><span>FOREST HARMONY</span><strong id="harmonyValue">32</strong></div>
-        <div class="harmony-track"><i id="harmonyBar"></i><span class="milestone" style="left:50%">✦</span><span class="milestone" style="left:80%">✦</span></div>
-      </div>
-      <button id="mapButton" class="map-button"><span class="map-glyph">⌖</span><span>MAP</span></button>
-    </header>
-
-    <section class="scene" id="scene">
-      <button id="instructionsButton" class="instructions-button" aria-label="Open game instructions">
-        <span>?</span><strong>Instructions</strong>
-      </button>
-      <div class="sky-glow"></div>
-      <div class="moon">☾</div>
-      <div class="forest forest-back"></div>
-      <div class="forest forest-front"></div>
-      <div class="fireflies" aria-hidden="true"></div>
-
-      <div class="cafe">
-        <div class="cafe-roof"><span></span></div>
-        <div class="chimney"></div>
-        <div class="cafe-wall">
-          <div class="window"><i></i><b>☕</b></div>
-          <div class="door"><span class="door-glass">OPEN</span><i></i></div>
-          <div class="awning"></div>
-          <div class="sign">WILLOW<br><em>&amp;</em> WHISK</div>
+  <main class="game-shell" aria-label="Dining Area Cat Cafe">
+    <section id="diningArea" class="dining-area" aria-label="Jocelyn's dining area where cats are">
+      <header class="top-bar"><div><p class="eyebrow">Jocelyn's Section</p><h1>Dining Area</h1></div><button id="mapButton" class="map-button" type="button" aria-expanded="false" aria-controls="mapMenu" title="Open area map">Map</button></header>
+      <nav id="mapMenu" class="map-menu hidden" aria-label="Area map"><button type="button" data-area="Kitchen">Kitchen</button><button type="button" data-area="Garden">Garden</button><button type="button" data-area="Counter">Counter</button><button type="button" data-area="Dining Area">Dining Area</button></nav>
+      <p id="narration" class="narration" aria-live="polite">The cats seem calmer here, far from the forest's whispering trees.</p>
+      <div id="room" class="room">
+        <div class="forest-glow"></div>
+        <div class="background-fix stair-cat-cover" aria-hidden="true"></div>
+        <div class="cafe-back-wall">
+          <div class="welcome-sign">WELCOME</div>
+          <div class="back-shelves"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="menu-board menu-coffee"><strong>Coffee</strong><span></span><span></span><span></span></div>
+          <div class="menu-board menu-sweets"><strong>Cake / Sweets</strong><span></span><span></span><span></span></div>
+          <div class="counter"><span class="coffee-machine"></span><span class="cups-stack"></span></div>
+          <div class="display-case"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="bench-seat"></div>
         </div>
-        <div class="vine">❧ ❧ ❧</div>
+        <div class="window window-left scenery" data-message="The windows glow faintly with forest magic." tabindex="0" role="button" aria-label="Magical forest window"><span class="moon"></span><span class="tree tree-one"></span><span class="tree tree-two"></span><span class="firefly f1"></span><span class="firefly f2"></span></div>
+        <div class="window window-right scenery" data-message="You feel like these cats remember something you don't." tabindex="0" role="button" aria-label="Magical forest window"><span class="tree tree-three"></span><span class="tree tree-four"></span><span class="firefly f3"></span></div>
+        <div class="shelf"><span class="cup"></span><span class="potion"></span><span class="book"></span><span class="tiny-plant"></span></div>
+        <div class="lamp lamp-left"></div><div class="lamp lamp-right"></div>
+        <div class="plant plant-left"></div><div class="plant plant-right"></div><div class="rug rug-main"></div><div class="rug rug-small"></div>
+        <div class="table table-one"><span class="tabletop"></span><span class="table-leg"></span></div><div class="chair chair-one"></div><div class="chair chair-two"></div>
+        <div class="table table-two"><span class="tabletop"></span><span class="table-leg"></span></div><div class="chair chair-three"></div>
+        <div class="deco-table deco-table-front"><span class="deco-cup"></span><span class="deco-plate"></span></div>
+        <div class="deco-chair deco-chair-front-left"></div><div class="deco-chair deco-chair-front-right"></div>
+        <div class="deco-table deco-table-left"><span class="deco-cup"></span><span class="deco-vase"></span></div>
+        <div class="deco-chair deco-chair-left"></div>
+        <div class="deco-table deco-table-right"><span class="deco-plate"></span><span class="deco-cup"></span></div>
+        <div class="deco-chair deco-chair-right"></div>
+        <div id="catLayer" class="cat-layer" aria-label="Interactive cafe cats"></div>
+        <button class="item food-bowl" type="button" data-item="food" data-holdable="true" data-held-label="Food bowl" data-debug-label="Food Bowl" aria-label="Food bowl"><span class="bowl-lip"></span><span class="kibble kibble-one"></span><span class="kibble kibble-two"></span><span class="kibble kibble-three"></span></button><button class="item toy-mouse" type="button" data-item="toy" data-holdable="true" data-held-label="Toy mouse" data-debug-label="Toy Mouse" aria-label="Toy mouse"><span class="mouse-body"></span><span class="mouse-ear"></span><span class="mouse-tail"></span></button><button class="item yarn-ball" type="button" data-item="toy" data-holdable="true" data-held-label="Yarn ball" data-debug-label="Yarn Ball" aria-label="Yarn ball"><span class="yarn-strand strand-one"></span><span class="yarn-strand strand-two"></span><span class="yarn-strand strand-three"></span></button><button class="item treat-jar" type="button" data-item="treat" data-holdable="true" data-held-label="Treat jar" data-debug-label="Treats Jar" aria-label="Treats jar"><span class="jar-lid"></span><span class="jar-label"></span><span class="treat-dot dot-one"></span><span class="treat-dot dot-two"></span></button>
+        <button class="item water-bowl" type="button" data-item="water" data-holdable="true" data-held-label="Water bowl" data-debug-label="Water Bowl" aria-label="Water bowl"><span class="water-shine"></span></button><button class="item cat-brush" type="button" data-item="brush" data-holdable="true" data-held-label="Cat brush" data-debug-label="Cat Brush" aria-label="Cat brush"><span class="brush-handle"></span><span class="brush-bristles"></span></button><button class="item cat-bed" type="button" data-item="bed" data-holdable="false" data-debug-label="Cat Bed" aria-label="Cat cushion bed"><span class="bed-cushion"></span></button>
+        <button class="item cat-tree" type="button" data-item="cat-tree" data-debug-label="Cat Tree" aria-label="Cat tree"><span></span><span></span><span></span></button><button class="item windowsill" type="button" data-item="windowsill" aria-label="Windowsill"></button>
       </div>
-
-      <div class="path"></div>
-      <div class="pond"><div class="water"><i></i><i></i><span>✦</span></div><div class="reeds">⌇⌇</div></div>
-      <div class="tiny-bridge" id="bridge"><span></span><span></span><span></span></div>
-
-      <button class="hotspot gather" data-item="Forest Berries" data-icon="🫐" style="left:53%;top:35%" aria-label="Gather Forest Berries">
-        <span class="plant berry-bush">● ●<br>●</span><em>Forest Berries</em><small>Gather</small>
-      </button>
-      <button class="hotspot gather night-only" data-item="Star Mushroom" data-icon="🍄" style="left:78%;top:51%" aria-label="Gather Star Mushroom">
-        <span class="plant mushrooms">♠ ♠</span><em>Star Mushrooms</em><small>Night only</small>
-      </button>
-      <button class="hotspot gather" data-item="Fairy Mint" data-icon="🌿" style="left:67%;top:66%" aria-label="Gather Fairy Mint">
-        <span class="plant mint">♣♣♣</span><em>Fairy Mint</em><small>Gather</small>
-      </button>
-      <button class="hotspot gather day-only" data-item="Wild Honey" data-icon="🍯" style="left:88%;top:27%" aria-label="Gather Wild Honey">
-        <span class="plant hive">▰</span><em>Wild Honey</em><small>Day only</small>
-      </button>
-      <button class="hotspot memory" id="memorySpot" style="left:83%;top:72%" aria-label="Examine a glimmer">
-        <span class="plant crystal">◇</span><em>A faint glimmer…</em><small>Examine</small>
-      </button>
-
-      <div class="garden-beds" aria-label="Garden beds">
-        <div class="bed-title"><span>YOUR GARDEN</span><small>Click a plot to tend it</small></div>
-        <button class="plot" data-plot="0"><span class="soil-dots">· · ·</span><small>Empty plot</small></button>
-        <button class="plot planted" data-plot="1"><span class="sprout">♧</span><small>Fairy Mint · 1/3</small></button>
-        <button class="plot weeded" data-plot="2"><span class="weeds">〽</span><small>Needs weeding</small></button>
-      </div>
-
-      <button class="creature fox" id="foxButton" aria-label="Talk to Juniper the fox"><span>🦊</span><em>!</em></button>
-
-      <aside class="quest-card" id="questCard">
-        <button class="collapse" id="collapseQuest">×</button>
-        <small>CREATURE REQUEST</small>
-        <div class="quest-head"><span>🦊</span><div><strong>A Minty Remedy</strong><p>Juniper's friend has a tummy ache.</p></div></div>
-        <div class="quest-progress"><span>Fairy Mint</span><b id="mintProgress">0 / 3</b></div>
-        <button id="giveMint" disabled>Gather 3 Fairy Mint</button>
-      </aside>
-
-      <div class="weather-layer rain" aria-hidden="true"></div>
-      <div class="weather-layer fog" aria-hidden="true"></div>
     </section>
-
-    <nav class="toolbar" aria-label="Garden tools">
-      <button class="tool active" data-tool="hand"><span>☝</span><small>Gather</small></button>
-      <button class="tool" data-tool="seeds"><span>◉</span><small>Seeds</small><b>4</b></button>
-      <button class="tool" data-tool="water"><span>♒</span><small>Water</small></button>
-      <button class="tool" data-tool="weed"><span>♨</span><small>Weed</small></button>
-      <button class="tool" data-tool="decorate"><span>✥</span><small>Decorate</small></button>
-      <div class="bag">
-        <span>INGREDIENT BASKET</span>
-        <div id="inventory"><i>🌿<b id="invMint">0</b></i><i>🫐<b id="invBerry">0</b></i><i>🍄<b id="invMushroom">0</b></i><i>🍯<b id="invHoney">0</b></i></div>
-      </div>
-    </nav>
-
-    <div class="toast" id="toast" role="status"></div>
-
-    <div class="modal-backdrop" id="mapModal" hidden>
-      <section class="modal map-modal">
-        <button class="modal-close" data-close="mapModal">×</button>
-        <small>WILLOW &amp; WHISK</small><h2>Where would you like to go?</h2>
-        <div class="map-grid">
-          <button><span>🍳</span><strong>Kitchen</strong><small>Cook your gathered ingredients</small></button>
-          <button class="current"><span>🌿</span><strong>Garden Near Forest</strong><small>You are here</small></button>
-          <button><span>🔔</span><strong>Counter</strong><small>Serve mysterious customers</small></button>
-          <button><span>🫖</span><strong>Dining Area</strong><small>Listen for rumors and stories</small></button>
-        </div>
-      </section>
-    </div>
-
-    <div class="modal-backdrop" id="memoryModal" hidden>
-      <section class="modal memory-modal">
-        <button class="modal-close" data-close="memoryModal">×</button>
-        <div class="memory-art"><span>◇</span><i></i></div>
-        <small>MEMORY FRAGMENT · 1 OF 5</small><h2>The Strange Crystal</h2>
-        <blockquote>“You tucked a crystal beneath the old willow. You said the forest would remember… even if you couldn't.”</blockquote>
-        <p>The voice is familiar, but the face slips away like mist.</p>
-        <button class="primary" data-close="memoryModal">Keep the fragment</button>
-      </section>
-    </div>
-
-    <div class="modal-backdrop" id="plotModal" hidden>
-      <section class="modal plot-modal">
-        <button class="modal-close" data-close="plotModal">×</button>
-        <span class="plot-icon" id="plotIcon">🌱</span><small>GARDEN PLOT</small><h2 id="plotTitle">Empty soil</h2><p id="plotDescription">This patch is ready for a seed.</p>
-        <div class="plot-actions" id="plotActions"></div>
-      </section>
-    </div>
-
-    <div class="modal-backdrop" id="decorModal" hidden>
-      <section class="modal decor-modal">
-        <button class="modal-close" data-close="decorModal">×</button>
-        <small>GARDEN DECORATIONS</small><h2>Add a little magic</h2>
-        <div class="decor-grid">
-          <button data-decor="🏮"><span>🏮</span>Lantern<small>+ creature visits</small></button>
-          <button data-decor="🪑"><span>🪑</span>Cozy bench<small>+ harmony</small></button>
-          <button data-decor="⛲"><span>⛲</span>Bird bath<small>+ bird visits</small></button>
-          <button data-decor="🎐"><span>🎐</span>Wind chime<small>+ pixie visits</small></button>
-        </div>
-      </section>
-    </div>
-
-    <div class="modal-backdrop" id="instructionsModal" hidden>
-      <section class="modal instructions-modal" aria-labelledby="instructionsTitle">
-        <button class="modal-close" data-close="instructionsModal" aria-label="Close instructions">×</button>
-        <span class="handbook-vine vine-left">❧<br>🌿<br>✿</span><span class="handbook-vine vine-right">🍄<br>❧<br>🌼</span>
-        <header class="handbook-cover">
-          <div class="cover-art"><span class="cover-cafe">🏡</span><span class="cover-tree">🌲</span><span class="cover-spark">✦</span></div>
-          <div><small>WILLOW &amp; WHISK · PLAYER HANDBOOK</small><h2 id="instructionsTitle">A Guide to the<br>Magical Forest Café</h2><p>For lost memories, warm tea, and small acts of kindness.</p></div>
-        </header>
-
-        <div class="instructions-content handbook-pages">
-          <article class="instruction-card wide welcome-card"><span class="instruction-icon">🏡</span><div><span class="chapter">CHAPTER ONE</span><h3>Welcome, café keeper!</h3><p>You woke in a mysterious forest with no memories. After finding an abandoned inn, you transformed it into a cozy café with magical ingredients from the woods. Meet curious customers, tend your garden, cook comforting meals, and uncover the life you forgot.</p></div><span class="welcome-cat">🐈</span></article>
-
-          <article class="instruction-card"><span class="instruction-icon">🎯</span><div><h3>Your Goal</h3><ul class="check-list"><li>Serve customers quickly</li><li>Gather magical ingredients</li><li>Cook food and drinks</li><li>Keep your garden healthy</li><li>Complete quests</li><li>Collect Memory Fragments</li><li>Discover the truth</li></ul></div></article>
-
-          <article class="instruction-card controls-card"><span class="instruction-icon">🎮</span><div><h3>Controls</h3><div class="control-grid"><p><b>🖱 Left Click</b><small>Interact · gather · harvest · talk</small></p><p><b>↔ Drag</b><small>Move cooking ingredients</small></p><p><b>🗺 Map</b><small>Travel between locations</small></p><p><b>📖 Instructions</b><small>Open this guide anytime</small></p><p><b>⚙ Settings</b><small>Adjust sound and options</small></p><p><b>× Close</b><small>Return to gameplay</small></p></div></div></article>
-
-          <article class="instruction-card wide world-card"><span class="instruction-icon">🗺️</span><div><span class="chapter">PLACES TO GO</span><h3>Explore the World</h3><p class="section-intro">Use the Map button in the top-right corner to travel.</p><div class="world-grid"><div><span>🌿</span><b>Garden</b><small>Gather · plant · meet creatures · find paths</small></div><div><span>🍳</span><b>Kitchen</b><small>Cook · combine · unlock · upgrade</small></div><div><span>☕</span><b>Counter</b><small>Take orders · deliver · earn friendship</small></div><div><span>🐈</span><b>Dining Area</b><small>Relax · chat · spend time with cats</small></div></div></div></article>
-
-          <article class="instruction-card wide garden-flow-card"><span class="instruction-icon">🌱</span><div><h3>Gardening Guide</h3><div class="garden-flow"><div><span>🌰</span><b>1. Plant</b><small>Choose empty soil</small></div><i>➜</i><div><span>💧</span><b>2. Water</b><small>Visit every day</small></div><i>➜</i><div><span>🌱</span><b>3. Grow</b><small>Give it time</small></div><i>➜</i><div><span>🧺</span><b>4. Harvest</b><small>When fully grown</small></div><i>➜</i><div><span>🥣</span><b>5. Cook</b><small>Use in recipes</small></div></div><p class="note">✦ Different plants grow at different speeds.</p></div></article>
-
-          <article class="instruction-card weather-card"><span class="instruction-icon">🌙</span><div><h3>Time &amp; Weather</h3><div class="weather-guide"><p><b>☀ Morning</b><small>Flowers bloom · bees appear</small></p><p><b>🌤 Afternoon</b><small>Most ingredients available</small></p><p><b>🌙 Night</b><small>Glow Mushrooms · Moon Flowers · fireflies</small></p><p><b>🌧 Rain</b><small>Faster growth · more mushrooms</small></p><p><b>🌫 Fog</b><small>Rare spirits visit</small></p></div></div></article>
-
-          <article class="instruction-card ingredient-card"><span class="instruction-icon">🧺</span><div><h3>Ingredient Guide</h3><div class="ingredient-grid"><p><span>🍄</span><b>Star Mushroom</b><small>Near old trees</small></p><p><span>🫐</span><b>Moonberries</b><small>Found at night</small></p><p><span>🌿</span><b>Fairy Mint</b><small>Near rivers</small></p><p><span>🌸</span><b>Glow Flower</b><small>After sunset</small></p><p><span>🍯</span><b>Wild Honey</b><small>Enchanted bees</small></p></div></div></article>
-
-          <article class="instruction-card harmony-card"><span class="instruction-icon">✨</span><div><h3>Forest Harmony</h3><ul class="check-list"><li>Plant flowers</li><li>Help animals</li><li>Clean weeds</li><li>Complete quests</li></ul><div class="handbook-meter"><i></i><span>32</span><b>✦</b></div><p>Higher Harmony reveals rare ingredients, garden areas, hidden recipes, and story events.</p></div></article>
-
-          <article class="instruction-card creature-card"><span class="instruction-icon">🧚</span><div><h3>Magical Creatures</h3><div class="portrait-row"><p><span>🦊</span><b>Fox</b><small>Brings berries</small></p><p><span>🦉</span><b>Owl</b><small>Shares secrets</small></p><p><span>🧚</span><b>Pixie</b><small>Unlocks recipes</small></p><p><span>✨</span><b>Spirit</b><small>Gives quests</small></p><p><span>🐇</span><b>Rabbit</b><small>Needs help</small></p></div></div></article>
-
-          <article class="instruction-card wide memory-card"><span class="instruction-icon">🧩</span><div><h3>Memory Fragments</h3><p>Search the forest for forgotten memories. Each fragment unlocks a short scene.</p><div class="memory-timeline"><span>💎<small>Crystal</small></span><i></i><span>📜<small>Recipe</small></span><i></i><span>📿<small>Necklace</small></span><i></i><span>🖼️<small>Drawing</small></span><i class="locked"></i><span>❔<small>Unknown</small></span></div></div></article>
-
-          <article class="instruction-card"><span class="instruction-icon">💰</span><div><h3>Currency</h3><div class="two-column"><p><b>Earn coins</b><small>Serve customers<br>Complete quests<br>Sell dishes</small></p><p><b>Spend coins</b><small>Decorations<br>Seeds &amp; upgrades<br>Furniture</small></p></div></div></article>
-
-          <article class="instruction-card"><span class="instruction-icon">❤️</span><div><h3>Customers</h3><div class="customer-row"><span title="Elf">🧝</span><span title="Dragon Hybrid">🐉</span><span title="Water Spirit">🧜</span><span title="Mage">🧙</span></div><p>They may look human, but many are magical. Friendship reveals recipes, lore, quests, and clues.</p></div></article>
-
-          <article class="instruction-card cat-card"><span class="instruction-icon">🐈</span><div><h3>Café Cats</h3><p>Pet them. Play with them. Watch them charm your customers. Happy cats make the whole café cozier.</p><div class="cat-shelf">🐈‍⬛ <i>♡</i> 🐈</div></div></article>
-
-          <article class="instruction-card tips-card"><span class="instruction-icon">💡</span><div><h3>Keeper's Tips</h3><ul><li>Check the garden every day.</li><li>Talk to every customer.</li><li>Watch the weather for rare ingredients.</li><li>Explore hidden paths.</li><li>Read dialogue for story clues.</li></ul></div></article>
-        </div>
-        <button class="primary instructions-done" data-close="instructionsModal">Back to the garden</button>
-      </section>
-    </div>
-  </main>
-  <script src="game.js"></script>
+    <section id="catScreen" class="cat-screen hidden" aria-label="Cat interaction screen"><button id="backButton" class="back-button" type="button">Back</button><div class="cat-profile"><h2 id="catName">Cat Name</h2><div id="bigCat" class="big-cat" aria-hidden="true"><span class="big-tail"></span><span class="big-body"></span><span class="big-head"></span><span class="big-ear ear-left"></span><span class="big-ear ear-right"></span><span class="big-eye left"></span><span class="big-eye right"></span><span class="big-nose"></span></div><div id="catReaction" class="cat-reaction" aria-live="polite"></div><div class="stats" aria-label="Cat stats"><label>Hunger <meter id="hungerMeter" min="0" max="100" value="50"></meter><span id="hungerValue"></span></label><label>Happiness <meter id="happyMeter" min="0" max="100" value="50"></meter><span id="happyValue"></span></label><label>Affection <meter id="affectionMeter" min="0" max="100" value="50"></meter><span id="affectionValue"></span></label></div><div class="cat-actions"><button id="feedButton" type="button">Feed</button><button id="petButton" type="button">Pet</button><button id="playButton" type="button">Play</button></div></div></section>
+  </main><div id="heldItem" class="held-item hidden" aria-hidden="true"></div><script src="script.js"></script>
 </body>
 </html>
