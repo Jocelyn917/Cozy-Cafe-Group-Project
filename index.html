@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magical Forest Cafe - Dining Area</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell" aria-label="Dining Area Cat Cafe">
+    <section id="diningArea" class="dining-area" aria-label="Jocelyn's dining area where cats are">
+      <header class="top-bar"><div><p class="eyebrow">Jocelyn's Section</p><h1>Dining Area</h1></div><button id="mapButton" class="map-button" type="button" aria-expanded="false" aria-controls="mapMenu" title="Open area map">Map</button></header>
+      <nav id="mapMenu" class="map-menu hidden" aria-label="Area map"><button type="button" data-area="Kitchen">Kitchen</button><button type="button" data-area="Garden">Garden</button><button type="button" data-area="Counter">Counter</button><button type="button" data-area="Dining Area">Dining Area</button></nav>
+      <p id="narration" class="narration" aria-live="polite">The cats seem calmer here, far from the forest's whispering trees.</p>
+      <div id="room" class="room">
+        <div class="forest-glow"></div>
+        <div class="background-fix stair-cat-cover" aria-hidden="true"></div>
+        <div class="cafe-back-wall">
+          <div class="welcome-sign">WELCOME</div>
+          <div class="back-shelves"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="menu-board menu-coffee"><strong>Coffee</strong><span></span><span></span><span></span></div>
+          <div class="menu-board menu-sweets"><strong>Cake / Sweets</strong><span></span><span></span><span></span></div>
+          <div class="counter"><span class="coffee-machine"></span><span class="cups-stack"></span></div>
+          <div class="display-case"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="bench-seat"></div>
+        </div>
+        <div class="window window-left scenery" data-message="The windows glow faintly with forest magic." tabindex="0" role="button" aria-label="Magical forest window"><span class="moon"></span><span class="tree tree-one"></span><span class="tree tree-two"></span><span class="firefly f1"></span><span class="firefly f2"></span></div>
+        <div class="window window-right scenery" data-message="You feel like these cats remember something you don't." tabindex="0" role="button" aria-label="Magical forest window"><span class="tree tree-three"></span><span class="tree tree-four"></span><span class="firefly f3"></span></div>
+        <div class="shelf"><span class="cup"></span><span class="potion"></span><span class="book"></span><span class="tiny-plant"></span></div>
+        <div class="lamp lamp-left"></div><div class="lamp lamp-right"></div>
+        <div class="plant plant-left"></div><div class="plant plant-right"></div><div class="rug rug-main"></div><div class="rug rug-small"></div>
+        <div class="table table-one"><span class="tabletop"></span><span class="table-leg"></span></div><div class="chair chair-one"></div><div class="chair chair-two"></div>
+        <div class="table table-two"><span class="tabletop"></span><span class="table-leg"></span></div><div class="chair chair-three"></div>
+        <div class="deco-table deco-table-front"><span class="deco-cup"></span><span class="deco-plate"></span></div>
+        <div class="deco-chair deco-chair-front-left"></div><div class="deco-chair deco-chair-front-right"></div>
+        <div class="deco-table deco-table-left"><span class="deco-cup"></span><span class="deco-vase"></span></div>
+        <div class="deco-chair deco-chair-left"></div>
+        <div class="deco-table deco-table-right"><span class="deco-plate"></span><span class="deco-cup"></span></div>
+        <div class="deco-chair deco-chair-right"></div>
+        <div id="catLayer" class="cat-layer" aria-label="Interactive cafe cats"></div>
+        <button class="item food-bowl" type="button" data-item="food" data-holdable="true" data-held-label="Food bowl" data-debug-label="Food Bowl" aria-label="Food bowl"><span class="bowl-lip"></span><span class="kibble kibble-one"></span><span class="kibble kibble-two"></span><span class="kibble kibble-three"></span></button><button class="item toy-mouse" type="button" data-item="toy" data-holdable="true" data-held-label="Toy mouse" data-debug-label="Toy Mouse" aria-label="Toy mouse"><span class="mouse-body"></span><span class="mouse-ear"></span><span class="mouse-tail"></span></button><button class="item yarn-ball" type="button" data-item="toy" data-holdable="true" data-held-label="Yarn ball" data-debug-label="Yarn Ball" aria-label="Yarn ball"><span class="yarn-strand strand-one"></span><span class="yarn-strand strand-two"></span><span class="yarn-strand strand-three"></span></button><button class="item treat-jar" type="button" data-item="treat" data-holdable="true" data-held-label="Treat jar" data-debug-label="Treats Jar" aria-label="Treats jar"><span class="jar-lid"></span><span class="jar-label"></span><span class="treat-dot dot-one"></span><span class="treat-dot dot-two"></span></button>
+        <button class="item water-bowl" type="button" data-item="water" data-holdable="true" data-held-label="Water bowl" data-debug-label="Water Bowl" aria-label="Water bowl"><span class="water-shine"></span></button><button class="item cat-brush" type="button" data-item="brush" data-holdable="true" data-held-label="Cat brush" data-debug-label="Cat Brush" aria-label="Cat brush"><span class="brush-handle"></span><span class="brush-bristles"></span></button><button class="item cat-bed" type="button" data-item="bed" data-holdable="false" data-debug-label="Cat Bed" aria-label="Cat cushion bed"><span class="bed-cushion"></span></button>
+        <button class="item cat-tree" type="button" data-item="cat-tree" data-debug-label="Cat Tree" aria-label="Cat tree"><span></span><span></span><span></span></button><button class="item windowsill" type="button" data-item="windowsill" aria-label="Windowsill"></button>
+      </div>
+    </section>
+    <section id="catScreen" class="cat-screen hidden" aria-label="Cat interaction screen"><button id="backButton" class="back-button" type="button">Back</button><div class="cat-profile"><h2 id="catName">Cat Name</h2><div id="bigCat" class="big-cat" aria-hidden="true"><span class="big-tail"></span><span class="big-body"></span><span class="big-head"></span><span class="big-ear ear-left"></span><span class="big-ear ear-right"></span><span class="big-eye left"></span><span class="big-eye right"></span><span class="big-nose"></span></div><div id="catReaction" class="cat-reaction" aria-live="polite"></div><div class="stats" aria-label="Cat stats"><label>Hunger <meter id="hungerMeter" min="0" max="100" value="50"></meter><span id="hungerValue"></span></label><label>Happiness <meter id="happyMeter" min="0" max="100" value="50"></meter><span id="happyValue"></span></label><label>Affection <meter id="affectionMeter" min="0" max="100" value="50"></meter><span id="affectionValue"></span></label></div><div class="cat-actions"><button id="feedButton" type="button">Feed</button><button id="petButton" type="button">Pet</button><button id="playButton" type="button">Play</button></div></div></section>
+  </main><div id="heldItem" class="held-item hidden" aria-hidden="true"></div><script src="script.js"></script>
+</body>
+</html>
