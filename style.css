@@ -3723,3 +3723,57 @@ meter { width: 100%; height: 18px; }
   outline: none !important;
   box-shadow: none !important;
 }
+
+/* Final presentation cleanup: remove temporary debug labels/red prop outlines. */
+.room .item {
+  z-index: 70 !important;
+  outline: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+.room .item::after {
+  content: none !important;
+  display: none !important;
+}
+
+.room .item:hover,
+.room .item:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, .92) !important;
+  outline-offset: 3px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, .68) !important;
+}
+
+.room .food-bowl,
+.room .toy-mouse,
+.room .yarn-ball,
+.room .treat-jar,
+.room .water-bowl,
+.room .cat-brush {
+  transform: translate(-50%, -50%) scale(.78) !important;
+}
+
+.room .food-bowl { left: 71% !important; top: 62% !important; }
+.room .water-bowl { left: 76% !important; top: 61% !important; }
+.room .toy-mouse { left: 48% !important; top: 64% !important; }
+.room .cat-brush { left: 62% !important; top: 73% !important; }
+.room .yarn-ball { left: 82% !important; right: auto !important; top: 82% !important; }
+.room .treat-jar { left: 49% !important; top: 42% !important; }
+
+.room .cat-tree,
+.room .cat-bed {
+  z-index: 72 !important;
+  background: transparent !important;
+  border: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.room .cat-tree:hover,
+.room .cat-tree:focus-visible,
+.room .cat-bed:hover,
+.room .cat-bed:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
